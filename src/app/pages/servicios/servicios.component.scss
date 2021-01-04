@@ -1,0 +1,85 @@
+/*
+    Los estilos GLOBALES de los inputs 
+    y los botones encuentralos en STYLE.SCCS
+*/
+
+// Variables para definir el BG de la tabla y los botones
+$color_tabla: white;
+$color_hover: rgb(233, 55, 55);
+$bg_tabla: rgb(66, 64, 64);
+
+$bg_btnAdd: rgba(46, 139, 86, 0.746);
+$btn_hoverAdd: seagreen;
+$bg_btnDelete: rgba(207, 58, 58, 0.746);
+$btn_hoverDelete: rgb(207, 58, 58);
+
+
+table { // <--- Inicio table
+    width: 460px;
+    margin: 50px auto;
+    text-align: center;
+    border: 1px solid rgb(206, 203, 203);
+
+    @media (min-width:620px) { // Responsive table
+        width: 600px;
+    }
+    
+    thead {
+        background-color: $bg_tabla;
+        color: $color_tabla;
+    }
+
+    tbody {
+
+        tr {
+            &:hover {
+                cursor: pointer;
+                color: $color_hover;
+            }
+
+            td {
+                border-bottom: 1px solid rgb(206, 203, 203);
+            }
+        }
+    }
+} // Final table --->
+
+h2 { // <--- Inicio h2
+    background-color: $bg_tabla;
+    color: $color_tabla;
+    padding: 9px 0;
+} // Final h2 --->
+
+
+.inputs-content { // <--- Inicio inputs-content
+    text-align: center;
+
+    @media (max-width: 620px) { // Responsive inputs-content
+ 
+        input {
+            width: 145px;
+        }
+    }
+} // Final inputs-content --->
+
+
+.btn-content { // <--- Inicio btn-content
+    text-align: center;
+    margin-top: 22px;
+    
+    .btn-add {
+        background-color: $bg_btnAdd;
+        
+        &:hover {
+            background-color: $btn_hoverAdd;
+        }
+    }
+    
+    .btn-delete {
+        background-color: $bg_btnDelete;
+        
+        &:hover {
+            background-color: $btn_hoverDelete;
+        }
+    }
+} // Final btn-content --->

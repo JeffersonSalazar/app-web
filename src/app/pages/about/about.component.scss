@@ -1,0 +1,93 @@
+/*
+    1- Los estilos GLOBALES de los botones 
+    encuentralos en STYLE.SCCS
+*/
+
+/*
+    Variables para definir los colores 
+    de los botones, bordes y nombres
+*/
+$boton_one: cornflowerblue;
+$boton_two: forestgreen;
+$boton_three: deeppink;
+
+
+.about-content { // <--- Inicio about-content
+
+    .btn-content {
+
+        .btn-one {
+            background-color: $boton_one;
+        }
+        
+        .btn-two {
+            background-color: $boton_two;
+        }
+        
+        .btn-three {
+            background-color: $boton_three;
+        }
+    } // Final about-content --->
+
+
+    div { // <--- Inicio del div
+        text-align: center;
+        width: 400px;
+        margin: 0 auto;
+        padding: 10px 10px;
+        border-radius: 5px;
+
+        @media (min-width:720px) { // Responsive div
+            margin-left: 10px;
+        }
+
+        img {
+            width: 60%;
+        }
+
+        h5 {
+            font-size: 50px;
+            margin: 5px 0;
+        }
+
+        p {
+            display: none;
+
+            @media (min-width:720px) { // Responsive p
+                display: block;
+            }
+        }
+
+        h6 {
+            color: rgb(163, 151, 151);
+            margin-top: 10px;
+        }
+    } // Final del div --->
+
+
+    .most-one { // <--- Inicio tarjeta uno
+        border: 2px solid $boton_one;
+
+        h5 {
+            color: $boton_one;
+        }
+    } // Inicio tarjeta uno ---> 
+
+
+    .most-two { // <--- Inicio tarjeta dos
+        border: 2px solid $boton_two;
+
+        h5 {
+            color: $boton_two;
+        }
+    } // Inicio tarjeta dos ---> 
+
+
+    .most-three { // <--- Inicio tarjeta tres
+        border: 2px solid $boton_three;
+
+        h5 {
+            color: $boton_three;
+        }
+    } // Inicio tarjeta tres --->
+}

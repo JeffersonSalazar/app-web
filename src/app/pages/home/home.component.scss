@@ -1,0 +1,64 @@
+/*
+    Los estilos GLOBALES de los inputs 
+    y los botones encuentralos en STYLE.SCCS
+*/
+
+// Variables para definir el color de los botones
+$color_one : red;
+$color_two : green;
+$color_three : blue;
+
+// Estilo grupal para los Divs
+@mixin styles_divs {
+    text-align: center;
+    padding: 30px 0;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 16px 0 #ccc;
+}
+
+// Contenedor principal del componente HOME
+.home-content {
+    width: 440px;
+    margin: 0 auto;
+
+    @media (min-width: 1020px) { // Responsive home-content
+        width: 600px;
+    }
+    
+    h2 {
+        padding: 30px 0;
+        text-align: center;
+
+        @media (min-width: 1020px) { // Responsive h2
+            padding: 40px 0;
+        }
+    }
+
+    .sect-one {
+        @include styles_divs;
+
+        h3 {
+            width: 380px;
+            margin: 0 auto;
+            padding: 10px 0;
+            box-shadow: 0 0 16px 0 #ccc;
+        }
+    }
+
+    .sect-two {
+        @include styles_divs;
+        margin-top: 30px;
+        
+        .btn-red {
+            background-color: $color_one;
+        }
+
+        .btn-green {
+            background-color: $color_two;
+        }
+
+        .btn-blue {
+            background-color: $color_three;
+        }
+    }
+}

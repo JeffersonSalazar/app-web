@@ -1,0 +1,20 @@
+<!-- Contenedor principal del componente HOME -->
+<div class="home-content">
+    <h2>!! Usa Los Inputs o Botones y Cambia el Estilo ¡¡</h2>
+
+    <!-- Contenedor de los Inputs -->
+    <div class="sect-one">
+        <h3 [ngStyle]="{'color': color_text, 'background-color': bg_color}">Cambia Me!</h3>
+        <input type="text" placeholder="Ingresa un color" [(ngModel)]="color_text">
+        <input type="text" placeholder="Ingresa un fondo" [(ngModel)]="bg_color">
+    </div>
+
+    <!-- Contenedor de los Botones -->
+    <div class="sect-two">
+        <h3 [ngStyle]="{'color': text}">Elije Tu Color</h3>
+        <button type="button" class="btn-red" (click)="color_red()">Red</button>
+        <button type="button" class="btn-green" (click)="color_green()">Green</button>
+        <button type="button" class="btn-blue" (click)="color_blue()">Blue</button>
+    </div>
+</div>
+

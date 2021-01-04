@@ -1,0 +1,32 @@
+<!-- Contenedor principal del componente ABOUT -->
+<section class="about-content">
+    <div class="btn-content">
+        <button type="button" class="btn-one" (click)="mostrar_one()">One View</button>
+        <button type="button" class="btn-two" (click)="mostrar_two()">Two View</button>
+        <button type="button" class="btn-three" (click)="mostrar_three()">three View</button>
+    </div>
+
+    <!-- Tarjeta Uno -->
+    <div class="most-one" *ngIf="most_one">
+        <img src="../../../assets/img/person.png" alt="imagen">
+        <h5>FRANK</h5>
+        <p>{{ informacion.parrafo }}</p> <!-- Objeto con el contenido del parrafo -->
+        <h6>Asesor Comercial</h6>
+    </div>
+
+    <!-- Tarjeta Dos -->
+    <div class="most-two" *ngIf="most_two">
+        <img src="../../../assets/img/person.png" alt="imagen">
+        <h5>MAX</h5>
+        <p>{{ informacion.parrafo }}</p> <!-- Objeto con el contenido del parrafo -->
+        <h6>Atension al Cliente</h6>
+    </div>
+
+    <!-- Tarjeta Tres -->
+    <div class="most-three" *ngIf="most_three">
+        <img src="../../../assets/img/person.png" alt="imagen">
+        <h5>LOUIS</h5>
+        <p>{{ informacion.parrafo }}</p> <!-- Objeto con el contenido del parrafo -->
+        <h6>Lider de Ventas</h6>
+    </div>
+</section>

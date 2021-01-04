@@ -1,0 +1,38 @@
+<!-- Contenedor del componente SERVICIOS -->
+<table>
+    <thead *ngIf="element(), else no_element">
+        <tr>
+            <th class="p-3">ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Correo</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        <tr *ngFor="let person of personas; index as i">
+            <td class="p-3">{{ i + 1 }}</td>
+            <td>{{ person.nombre }}</td>
+            <td>{{ person.apellido }}</td>
+            <td>{{ person.correo }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Contenido que muestra cuando la tabla no tiene valores -->
+<ng-template #no_element>
+    <h2>No Hay Elementos En La Tabla</h2>
+</ng-template>
+    
+<!-- Seccion de los inputs -->
+<div class="inputs-content">   
+    <input type="text" placeholder="Nombre" [(ngModel)]="add_name">
+    <input type="text" placeholder="Apellido" [(ngModel)]="add_sub">
+    <input type="text" placeholder="Correo" [(ngModel)]="add_email">
+</div>
+
+<!-- Seccion de los botones -->
+<div class="btn-content">
+    <button type="button" class="btn-add" (click)="btn_add()">Add</button>
+    <button type="button" class="btn-delete" (click)="btn_delete()">Delete</button>
+</div>
